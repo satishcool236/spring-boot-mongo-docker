@@ -2,11 +2,11 @@ version: '3.1'
 
 services:
   springboot:
-    image: satish236/spring-boot-mongo:latest
+    image: dockerhandson/spring-boot-mongo:latest
     restart: always # This will be ignored if we deploy in docker swarm
     container_name: springboot
     ports:
-      - 9090:8080
+      - 8080:8080
     working_dir: /opt/app
     depends_on:
       - mongo
@@ -38,5 +38,4 @@ networks:
   springappnetwork:
     external:
       name: customoverlay
-
  
