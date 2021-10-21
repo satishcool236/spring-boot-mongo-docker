@@ -29,7 +29,7 @@ node{
         sshagent(['docker_swar']) {
 		    sh 'scp -o StrictHostKeyChecking=no  docker-compose.yml ubuntu@172.31.38.36:'
 		    //sh 'ssh -o StrictHostKeyChecking=no ubuntu@172.31.38.36 docker stack rm springboot'
-            sh 'ssh -o StrictHostKeyChecking=no ubuntu@172.31.38.36 docker stack deploy --prune --compose-file docker-compose.yml springboot'
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@172.31.38.36 docker stack deploy --prune --compose-file docker-compose.yml springboot'
         }
     }
 }
